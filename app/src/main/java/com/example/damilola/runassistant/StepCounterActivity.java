@@ -26,7 +26,7 @@ public class StepCounterActivity extends Activity implements SensorEventListener
         count = (TextView) findViewById(R.id.count);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
     }
-
+/*Function to setting the step counter by making use of a sensor*/
     @Override
     protected void onResume () {
         super.onResume();
@@ -38,7 +38,7 @@ public class StepCounterActivity extends Activity implements SensorEventListener
             Toast.makeText(this, "Count sensor not available!", Toast.LENGTH_LONG).show();
         }
     }
-
+/*When the user is not walking or running step counter will be paused*/
     @Override
     protected void onPause(){
         super.onPause();
